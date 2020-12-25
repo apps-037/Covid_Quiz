@@ -134,7 +134,6 @@ window.onload = function() {
 function next() {
 
    
-  // if the question is last then redirect to final page
   if (question_count == questions.length - 1) {
     sessionStorage.setItem("time", time);
     clearInterval(mytime);
@@ -143,7 +142,6 @@ function next() {
   console.log(question_count);
 
   let user_answer = document.querySelector("li.option.active").innerHTML;
-  // check if the answer is right or wrong
   if (user_answer == questions[question_count].answer) {
     points += 10;
     sessionStorage.setItem("points", points);
